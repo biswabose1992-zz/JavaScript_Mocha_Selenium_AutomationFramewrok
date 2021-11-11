@@ -8,7 +8,7 @@ Test Automation Framework using JavaScript,Mocha, Selnium,Page Object Model,chai
 2. Run command `npm install`, to install all dependencies.
 3. Run command `npm test`
 5. After tests finish results will be show in terminal as shown in image below.
-<img width="22" alt="Screenshot 2021-11-11 at 15 46 51" src="https://user-images.githubusercontent.com/58852187/141327151-574e67df-0d10-4021-bf81-4b6ae50e1c9e.png">
+<img width="653" alt="Screenshot 2021-11-11 at 15 46 58" src="https://user-images.githubusercontent.com/58852187/141327377-c3279d84-8f69-42b9-8bea-40d9d0734942.png">
 
 
 
