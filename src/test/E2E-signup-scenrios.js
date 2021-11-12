@@ -14,8 +14,7 @@ describe('E2E signup scenrios', async function(){
     });
 
     it('Create new miro account - Successful signup', async function(){
-        //Enter test steps 
-        console.log(Math.random().toString(36).substr(2, 5));  
+        //Enter test steps  
         await   loginPage.enter_user_data(constants.newuser,constants.newemail,constants.newpwd);
         await   accountverifypage.verifycheckyouremailpage();
     })
