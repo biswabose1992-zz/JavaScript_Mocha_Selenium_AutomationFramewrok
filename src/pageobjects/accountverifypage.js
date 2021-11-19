@@ -1,6 +1,7 @@
 const { assert } = require('chai');
 const {By,Key} = require('selenium-webdriver');
 const { Driver } = require('selenium-webdriver/chrome');
+const constants = require('../utilities/constants');
 var BasePage = require ('./basepage');
 
 class accountverifypage extends BasePage{
@@ -11,9 +12,7 @@ class accountverifypage extends BasePage{
 
     async verifycheckyouremailpage(){
        
-        await this.verifytext(this.accountverify)
-        await assert.equal(await this.verifytext(this.accountverify),'Check your email')
-
+        await this.verifytext(this.accountverify,constants.Succesfulsignupmessage)
    }
 
 }

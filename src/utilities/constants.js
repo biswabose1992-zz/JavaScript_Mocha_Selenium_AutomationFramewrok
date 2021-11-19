@@ -10,6 +10,11 @@ class constants
     existingemailid="email@xyz.com"
     existingpassword="testuser13"
 
+    Succesfulsignupmessage="Check your email"
+    invalidemailmessage1="The email you entered is incorrect."
+    invalidemailmessage2="Sorry, this email is already registered"
+
+
 
 }
 

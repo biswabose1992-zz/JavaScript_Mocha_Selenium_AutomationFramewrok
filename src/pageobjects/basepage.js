@@ -1,3 +1,4 @@
+const { assert } = require("chai");
 const {By,Key,Builder} = require("selenium-webdriver");
 require("chromedriver");
 const driver = new Builder().forBrowser('chrome').build();
@@ -9,7 +10,7 @@ class BasePage{
     }
 
     async go_to_url(theURL){
-        await  driver.get(theURL);
+        await driver.get(theURL);
         await driver.manage().window().maximize();
     }
 
@@ -31,9 +32,10 @@ class BasePage{
         await driver.findElement(By.xpath(XPath)).click();
     }
 
-    async verifytext(XPath){
+    async verifytext(XPath,message){
         await driver.findElement(By.xpath(XPath)).isDisplayed();
-        return await driver.findElement(By.xpath(XPath)).getText();
+        assert.equal(await driver.findElement(By.xpath(XPath)).getText(),message);
+
     }
 
     async closebrowser(){

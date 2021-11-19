@@ -1,6 +1,7 @@
 const { assert } = require('chai');
 const {Key} = require('selenium-webdriver');
 const { Driver } = require('selenium-webdriver/chrome');
+const constants = require('../utilities/constants');
 var BasePage = require ('./basepage');
 
 class loginPage extends BasePage{
@@ -39,14 +40,14 @@ class loginPage extends BasePage{
 
     async validate_incorrect_emailcredentials(){
 
-        await this.verifytext(this.incorrect_emailid)
-        await assert.equal(await this.verifytext(this.incorrect_emailid),'The email you entered is incorrect.')
+        await this.verifytext(this.incorrect_emailid,constants.invalidemailmessage1)
+        
    }
 
    async validate_existingregistered_credentials(){
 
-    await this.verifytext(this.incorrect_registered_emailmessage)
-    await assert.equal(await this.verifytext(this.incorrect_registered_emailmessage),'Sorry, this email is already registered')
+    await this.verifytext(this.incorrect_registered_emailmessage,constants.invalidemailmessage2)
+
 }
 }
 module.exports = new loginPage();
