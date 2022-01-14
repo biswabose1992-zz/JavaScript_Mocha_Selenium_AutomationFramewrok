@@ -1,6 +1,6 @@
 const { assert } = require("chai");
 const {By,Key,Builder} = require("selenium-webdriver");
-require("chromedriver");
+//require("chromedriver");
 const driver = new Builder().forBrowser('chrome').build();
 driver.manage().setTimeouts({implicit: (10000)});
 
